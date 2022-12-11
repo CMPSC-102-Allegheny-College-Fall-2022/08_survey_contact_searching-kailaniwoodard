@@ -1,0 +1,126 @@
+# --> check the Python program
+- contactsearcher/contactsearcher/main.py:
+  - description: Ensure that main.py file exists in the contactsearcher/contactsearcher/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for main.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in main.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+  - description: Create a sufficient number of single-line comments in main.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 4
+      exact: false
+
+# --> check the Python program
+- contactsearcher/contactsearcher/search.py:
+  - description: Ensure that search.py file exists in the contactsearcher/contactsearcher/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for search.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Add correct 'import csv' statement in search.py program
+    check: MatchFileFragment
+    options:
+      fragment: "import csv"
+      count: 1
+      exact: true
+  - description: Add correct assignment statement for 'current_contact_job' in search.py program
+    check: MatchFileFragment
+    options:
+      fragment: "current_contact_job = contact_line[1]"
+      count: 1
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in search.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+  - description: Create a sufficient number of single-line comments in search.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 7
+      exact: false
+
+# --> check the Python program
+- contactsearcher/tests/test_search.py:
+  - description: Ensure that test_search.py file exists in the contactsearcher/tests/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_search.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Add a test case with the 'test_' fragment in test_search.py
+    check: MatchFileFragment
+    options:
+      fragment: test_
+      count: 5
+      exact: false
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_search.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 6
+      exact: false
+
+# --> check the technical writing for various characteristics
+- writing/reflection.md:
+  - description: Ensure that the reflection.md file exists in the writing/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for reflection.md
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Delete the 'Add Your Name Here' prompt in the reflection file
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+  - description: Write a minimum number of meaningful words in the reflection
+    check: CountFileWords
+    options:
+      count: 400
+      exact: false
+  - description: Confirm that the markdown file has the correct number of headers
+    check: CountMarkdownTags
+    options:
+      tag: heading
+      count: 9
+      exact: false
+  - description: Confirm that the markdown file has the correct number of code blocks
+    check: CountMarkdownTags
+    options:
+      tag: code
+      count: 2
+      exact: false
+  - description: Confirm that the markdown file has the correct number of fenced code blocks
+    check: CountMarkdownTags
+    options:
+      tag: code_block
+      count: 3
+      exact: false
+
+# confirm a suitable number of commit messages
+- description: Have at least a specific minimum of commits (5) in repository
+  check: CountCommits
+  options:
+    count: 5
