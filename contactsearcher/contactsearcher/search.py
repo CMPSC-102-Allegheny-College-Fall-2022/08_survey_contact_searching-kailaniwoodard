@@ -1,10 +1,8 @@
 """Search for an email address given a fragment of a job description."""
 
-from pathlib import Path
 from typing import List
 
 import csv
-import re
 
 # note: see https://docs.python.org/3/library/csv.html
 
