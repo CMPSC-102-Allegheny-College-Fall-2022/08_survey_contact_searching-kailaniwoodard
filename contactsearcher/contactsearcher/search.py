@@ -16,7 +16,7 @@ def search_for_email_given_job(job_description: str, contacts: str) -> List[List
     # create an empty current line
     current_line = 0
     # iterate through the file, parsing it line by line
-    if type(contacts) is Path:
+    if type(contacts) is not str:
         with open(contacts, "r") as input_file:
             reader = csv.reader(input_file)
             # refer to the file called input/contacts.txt to learn more about
