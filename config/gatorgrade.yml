@@ -40,7 +40,7 @@
   - description: Add correct assignment statement for 'current_contact_job' in search.py program
     check: MatchFileFragment
     options:
-      fragment: "current_contact_job = contact_line[1]"
+      fragment: "job_description in str(current_line[1]).lower()"
       count: 1
       exact: true
   - description: Create a sufficient number of docstring (i.e., multiple-line) comments in search.py
