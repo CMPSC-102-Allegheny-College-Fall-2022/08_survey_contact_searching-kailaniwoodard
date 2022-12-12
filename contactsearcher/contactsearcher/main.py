@@ -2,6 +2,7 @@
 
 # Add all of the required import statements to this module
 from contactsearcher.search import search_for_email_given_job
+
 # from search import search_for_email_given_job
 from pathlib import Path
 from typing import Optional
@@ -9,6 +10,7 @@ import typer
 
 # create a Typer object to support the command-line interface
 cli = typer.Typer()
+
 
 @cli.command()
 def contactsearcher(
