@@ -1,11 +1,5 @@
 # Contact Searching
 
-TODO: Make sure that you delete all of the TODO markers and the written prompts
-from this document. You should also ensure that the document does not have any
-mistakes in spelling, grammar, or the syntax of Markdown. Ultimately, the final
-version of your reflection should be a polished document that is suitable for
-publication on your web site.
-
 ## Kai'lani Woodard
 
 ## Program Output
@@ -142,9 +136,9 @@ regards to length.
 
 #### Execute trace of the `contactsearcher` program
 
-TODO: Write at least one paragraph to explain every function call when running `contactsearcher`
+Write at least one paragraph to explain every function call when running `contactsearcher`
 
-TODO: Your discussion should start with the invocation of the `contactsearcher`
+Your discussion should start with the invocation of the `contactsearcher`
 function in the `main` module, explain all of the subsequent function calls in
 the correct order, and then show how the program's control returns to the
 `contactsearcher` function in the `main` module.
