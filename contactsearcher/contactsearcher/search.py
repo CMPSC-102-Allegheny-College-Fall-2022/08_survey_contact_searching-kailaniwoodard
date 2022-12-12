@@ -25,12 +25,12 @@ def search_for_email_given_job(job_description: str, contacts: str) -> List[List
                 if job_description in str(current_line[1]).lower():
                     contacts_list.append(current_line)
         # return the list of the contacts who have a job description that matches
-    elif type(contacts) is str:
+    else:
         contacts_str = contacts.split("\n")
         for i in contacts_str:
             current_line = i
             line_job_desc = str(current_line).split(",")
-            if job_description in line_job_desc[1]:
+            if job_description in str(line_job_desc[1]).lower():
                 contacts_list.append(current_line)
 
     return contacts_list
