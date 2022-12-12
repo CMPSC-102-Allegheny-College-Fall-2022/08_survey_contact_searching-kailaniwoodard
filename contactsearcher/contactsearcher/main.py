@@ -41,7 +41,7 @@ def contactsearcher(
         f'  We are looking for contacts who have a job related to "{job_description}":\n'
     )
     # perform the search for all of the relevant email addresses given the job description
-    matches = search_for_email_given_job(job_description, contacts_file)
+    matches = search_for_email_given_job(job_description, str(contacts_file))
     # we know that there are some contacts in the list, so iterate through the list of
     # the contacts and display them in the terminal window
     for i in range(len(matches)):

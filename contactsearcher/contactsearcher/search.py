@@ -11,10 +11,8 @@ def search_for_email_given_job(job_description: str, contacts: str) -> List[List
     """Search for and return job description(s) given an email address."""
     # create an empty list of the contacts
     contacts_list = []
-    # create an empty current line
-    current_line = 0
     # iterate through the file, parsing it line by line
-    if type(contacts) is not str:
+    if '\\' in contacts:
         with open(contacts, "r") as input_file:
             reader = csv.reader(input_file)
             # refer to the file called input/contacts.txt to learn more about
@@ -31,7 +29,7 @@ def search_for_email_given_job(job_description: str, contacts: str) -> List[List
         contacts_str = contacts.split("\n")
         for i in contacts_str:
             current_line = i
-            line_job_desc = current_line.split(",")
+            line_job_desc = str(current_line).split(",")
             if job_description in line_job_desc[1]:
                 contacts_list.append(current_line)
 
